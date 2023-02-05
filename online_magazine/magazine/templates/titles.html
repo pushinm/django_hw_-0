@@ -1,0 +1,12 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+    {% for i in arts %}
+        <div>
+            <h4> {{i.title}} </h4>
+            <a href="{{i.get_absolute_url}}"><buttun>перейти</buttun></a>
+        </div>
+    {% endfor %}
+    <a href="{% url 'magazine:change_article' %}">«заголовок (id)»</a>
+    <a href="{% url 'magazine:delete_article' %}">удалить</a>
+{% endblock content %}

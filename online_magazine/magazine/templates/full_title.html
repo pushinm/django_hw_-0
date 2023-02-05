@@ -1,0 +1,7 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+    <h1>{{current_article.title}}</h1>
+    <p>{{current_article.main_body}}</p>
+    <a href="{% url 'magazine:article_view' %}"><button style="padding:8px; background-color:black; color:white; border-radius:10px;'">Обратно</button></a>
+{% endblock content %}
